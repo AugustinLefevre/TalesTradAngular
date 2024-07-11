@@ -1,0 +1,30 @@
+<div
+  fxLayout="column"
+  fxLayoutAlign="center"
+>
+    <mat-card class="story-creation-form">
+        <mat-card-header> <mat-card-title>Creation d'une histoire</mat-card-title></mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="storyCreationForm"  
+            fxLayout="column" 
+            fxLayoutAlign="center stretch"
+            >
+                <mat-form-field>
+                    <mat-label>Titre</mat-label>
+                    <input matInput formControlName="title">
+                </mat-form-field>
+    
+                <mat-form-field>
+                    <mat-label>Idée principale</mat-label>
+                    <textarea matInput rows="5" formControlName="mainIdea"></textarea>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="onSubmit()">Créer</button>
+        </mat-card-actions>
+ 
+    </mat-card>
+</div>
+
+  

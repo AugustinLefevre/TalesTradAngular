@@ -1,0 +1,36 @@
+.owner-message{
+    background-color: #b0d3f3;
+    margin-right: 5%;
+    padding: 1% 1% 0% 1%;
+    border-radius: 5px;
+    margin: .5% 5%;
+    max-width: 75%;
+    min-width: 20%;
+    width: fit-content;
+    overflow-anchor: auto;
+    overflow-wrap: anywhere;
+    margin-left: auto;
+}
+.non-owner-message{
+    background-color: #d8e9f9;
+    margin-left: 5%;
+    padding: 1% 1% 0% 1%;
+    border-radius: 5px;
+    margin: .5% 5%;
+    max-width: 75%;
+    min-width: 20%;
+    width: fit-content;
+    overflow-anchor: auto;
+    overflow-wrap: anywhere;
+    
+}
+.container{
+    display: flex;
+}
+.new-message-form {
+    width: 90%;
+    margin: 0 auto;
+}
+.submit-button{
+    margin-left: auto;
+}
