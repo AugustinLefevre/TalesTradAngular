@@ -13,7 +13,7 @@ export class ChatService {
   greetings: Message[] = [];
 
   constructor() {
-
+    
   }
 
   isActualUser(id: string | null) {
@@ -22,19 +22,22 @@ export class ChatService {
 
   connect() {
     const _this = this;
-    const socket = new SockJS(environment.apiUrl + '/chat');
+    
+    const socket = new SockJS('http://localhost:8083' + '/chat');
     this.stompClient = Stomp.over(socket);
     this.stompClient.connect({}, function (frame) {
       _this.stompClient.subscribe('/start/initial', function(msg){
         const message: Message = JSON.parse(msg.body)
+        console.dir(message);
         _this.greetings.push(message);
+        console.log("MESSAGE: " + message);
       });
    });
   }
 
   sendMessage(msg: string) {
     this.stompClient.send(
-      '/chat/current/resume',
+      '/current/resume',
       {},
       JSON.stringify({
         content: msg,

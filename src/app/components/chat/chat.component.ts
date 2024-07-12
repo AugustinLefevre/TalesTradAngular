@@ -32,7 +32,7 @@ export class ChatComponent {
     if(this.greetings.length == 0){
       this.messageService.getMessage().subscribe(datas =>{
         this.greetings.push(...datas); 
-       // console.log("ELEMENT:" + JSON.stringify(this.greetings))
+        //console.log("ELEMENT:" + JSON.stringify(this.greetings))
       });
     }
     

@@ -13,7 +13,7 @@ export class MessageClient {
 
     public getMessages(): Observable<any>{
         return this.http.get<Message[]>(
-            environment.apiUrl + "/chat/message"
+            environment.apiUrl + "/message"
         );
     }
 }
