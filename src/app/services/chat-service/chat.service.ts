@@ -13,7 +13,7 @@ export class ChatService {
   greetings: Message[] = [];
 
   constructor() {
-    
+
   }
 
   isActualUser(id: string | null) {
@@ -22,7 +22,7 @@ export class ChatService {
 
   connect() {
     const _this = this;
-    
+
     const socket = new SockJS('http://localhost:8083' + '/chat');
     this.stompClient = Stomp.over(socket);
     this.stompClient.connect({}, function (frame) {
