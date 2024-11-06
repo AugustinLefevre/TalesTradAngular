@@ -17,7 +17,7 @@ export class StoryCreationFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.storyCreationForm = this.fb.group({
-      title: ['', Validators.required],
+      title: ['',  [Validators.required, Validators.minLength(1)]],
       mainIdea: ['']
     });
   }

@@ -23,6 +23,11 @@ import { withFetch } from '@angular/common/http';
 
 import { RxStompService  } from '@stomp/ng2-stompjs';
 import { ChatComponent } from './components/chat/chat.component';
+import { ChatSlidebarComponent } from './components/chat-slidebar/chat-slidebar.component';
+import { MyStoriesComponent } from './components/my-stories/my-stories.component';
+import { UserMenuComponent } from './components/user-menu/user-menu.component';
+import { NewStoryComponent } from './components/new-story/new-story.component';
+import { AllStoriesComponent } from './components/all-stories/all-stories.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { ChatComponent } from './components/chat/chat.component';
     LoginComponent,
     RegisterComponent,
     StoryCreationFormComponent,
-    ChatComponent
+    ChatComponent,
+    ChatSlidebarComponent,
+    MyStoriesComponent,
+    UserMenuComponent,
+    NewStoryComponent,
+    AllStoriesComponent
   ],
   imports: [
     BrowserModule,
