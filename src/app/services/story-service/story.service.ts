@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { StoryClient } from '../../client/story.client';
 import { Observable } from 'rxjs/internal/Observable';
 import { Story } from '../../models/story.model';
 import { lastValueFrom } from 'rxjs';
+import { TextProposalRequest } from '../../client/request/TextProposalRequest';
 @Injectable({
   providedIn: 'root'
 })
@@ -40,6 +40,16 @@ export class StoryService {
 
   public getStories(pageIndex: number): Observable<Story[]>{
     return this.storyClient.getStories(pageIndex);
+  }
+
+  public createTextProposal(storyId: string, index: number, text: string) : Observable<any>{
+    var userId = localStorage.getItem("userId");
+    if(userId == null){
+      throw Error("user id ise null when trying to get user stories");
+    }
+    else {
+      return this.storyClient.createTextProposal(new TextProposalRequest(userId, storyId, index, text));
+    }
   }
 
 }

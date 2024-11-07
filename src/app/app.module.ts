@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconButton } from '@angular/material/button';
 import { MatIconAnchor } from '@angular/material/button';
-import {MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +31,7 @@ import { AllStoriesComponent } from './components/all-stories/all-stories.compon
 import { ViewStoryComponent } from './components/view-story/view-story.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NewTextProposalComponent } from './components/new-text-proposal/new-text-proposal.component';
+import { NgxEditorModule } from "ngx-editor";
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { NewTextProposalComponent } from './components/new-text-proposal/new-tex
     MatInputModule,
     MatIconButton,
     MatIconAnchor,
-    MatIconModule
+    MatIconModule,
+    NgxEditorModule
   ],
   providers: [
     provideClientHydration(),

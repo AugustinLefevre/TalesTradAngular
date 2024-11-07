@@ -1,9 +1,9 @@
 import {environment} from '../../environments/environment'
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { CreateStoryRequest } from './request/CreateStoryRequest';
-import { Story } from '../models/story.model';
+import { TextProposalRequest } from './request/TextProposalRequest';
 
 @Injectable({
   providedIn: 'root',
@@ -35,5 +35,22 @@ export class StoryClient {
     return this.http.get(
       environment.apiUrl + '/story/' + id
     );
+  }
+
+  public createTextProposal(request: TextProposalRequest) :Observable<any>{
+    console.log(request);
+    console.log(environment.apiUrl + '/story/text-proposal');
+    return this.http.post(
+      environment.apiUrl + '/story/text-proposal',
+      request
+    ).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    // Gérer l'erreur ici
+    console.error('Une erreur est survenue:', error);
+    return throwError('Quelque chose s\'est mal passé; veuillez réessayer plus tard.');
   }
 }
