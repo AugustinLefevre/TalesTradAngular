@@ -30,6 +30,7 @@ import { NewStoryComponent } from './components/new-story/new-story.component';
 import { AllStoriesComponent } from './components/all-stories/all-stories.component';
 import { ViewStoryComponent } from './components/view-story/view-story.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NewTextProposalComponent } from './components/new-text-proposal/new-text-proposal.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HeaderComponent } from './components/header/header.component';
     NewStoryComponent,
     AllStoriesComponent,
     ViewStoryComponent,
-    HeaderComponent
+    HeaderComponent,
+    NewTextProposalComponent
   ],
   imports: [
     BrowserModule,

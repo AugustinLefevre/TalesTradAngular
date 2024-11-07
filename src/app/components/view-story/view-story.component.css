@@ -2,7 +2,7 @@ h1.story-title {
     display: flex;
     text-transform: capitalize;
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 60px;
 }
 
 p.story-main-idea {
