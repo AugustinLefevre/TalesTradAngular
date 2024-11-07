@@ -1,0 +1,10 @@
+h1.story-title {
+    display: flex;
+    text-transform: capitalize;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+p.story-main-idea {
+    margin: 0 4%;
+}

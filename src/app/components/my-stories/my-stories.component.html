@@ -1,3 +1,10 @@
-<ul>
-    <li *ngFor="let story of stories">{{ story.title }}</li>
-</ul>
+<app-header></app-header>
+<div class="scroll-container">
+    <a *ngFor="let story of stories" class="story">
+        <div (click)="viewStory(story.storyId)">
+            <p class="story-title">{{story.title}}</p>
+            <p class="story-main-idea">{{story.mainIdea}}</p>
+        </div>
+    </a>
+    <div #sentinel></div>
+</div>

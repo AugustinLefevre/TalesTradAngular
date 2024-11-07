@@ -28,6 +28,8 @@ import { MyStoriesComponent } from './components/my-stories/my-stories.component
 import { UserMenuComponent } from './components/user-menu/user-menu.component';
 import { NewStoryComponent } from './components/new-story/new-story.component';
 import { AllStoriesComponent } from './components/all-stories/all-stories.component';
+import { ViewStoryComponent } from './components/view-story/view-story.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { AllStoriesComponent } from './components/all-stories/all-stories.compon
     MyStoriesComponent,
     UserMenuComponent,
     NewStoryComponent,
-    AllStoriesComponent
+    AllStoriesComponent,
+    ViewStoryComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

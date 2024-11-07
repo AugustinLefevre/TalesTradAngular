@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/security/register/register.compo
 import { LoginComponent } from './components/security/login/login.component';
 import { MyStoriesComponent } from './components/my-stories/my-stories.component';
 import { NewStoryComponent } from './components/new-story/new-story.component';
+import { ViewStoryComponent } from './components/view-story/view-story.component';
 
 
 const routes: Routes = [{
@@ -28,6 +29,10 @@ const routes: Routes = [{
   {
     path: 'new-story',
     component: NewStoryComponent,
+  },
+  {
+    path: 'view-story/:id',
+    component: ViewStoryComponent,
   },
 ];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StoryService } from '../../services/story-service/story.service';
 import {Story} from '../../models/story.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,7 @@ import {Story} from '../../models/story.model';
   styleUrl: './my-stories.component.css'
 })
 export class MyStoriesComponent  implements OnInit {
-  constructor(private storyService: StoryService){}
+  constructor(private storyService: StoryService, private router: Router) {}
 
   stories: Story[] = [];
 
@@ -17,5 +18,9 @@ export class MyStoriesComponent  implements OnInit {
     this.storyService.getStoriesByForCurrentUser().subscribe(datas =>{
       this.stories.push(...datas); 
     });
+  }
+
+  viewStory(id: string): void {
+    this.router.navigate(['/view-story', id]);
   }
 }

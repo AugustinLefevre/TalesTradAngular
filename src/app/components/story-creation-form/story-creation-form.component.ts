@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { StoryService } from '../../services/story-service/story.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-story-creation-form',
@@ -11,7 +12,7 @@ import { StoryService } from '../../services/story-service/story.service';
 export class StoryCreationFormComponent implements OnInit {
   public storyCreationForm!: FormGroup;
   
-  constructor(private storyService: StoryService, private fb: FormBuilder){
+  constructor(private storyService: StoryService, private fb: FormBuilder, private router: Router){
 
   }
 
@@ -22,9 +23,11 @@ export class StoryCreationFormComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  async onSubmit() {
     const formData: any = this.storyCreationForm.value;
-    this.storyService.addStory(formData.title, formData.mainIdea);
+    var storyId = await this.storyService.addStory(formData.title, formData.mainIdea);
+    console.log("story id :" + storyId)
+    this.router.navigate(['/view-story', storyId]);
   }
 
 }

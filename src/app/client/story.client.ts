@@ -30,4 +30,10 @@ export class StoryClient {
       environment.apiUrl + '/story/page/' + pageIndex
     );
   }
+
+  public getStoryById(id: string) : Observable<any>{
+    return this.http.get(
+      environment.apiUrl + '/story/' + id
+    );
+  }
 }

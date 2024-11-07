@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { Story } from '../../models/story.model';
 import { StoryService } from '../../services/story-service/story.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-stories',
@@ -13,7 +14,7 @@ export class AllStoriesComponent {
 
   @ViewChild('sentinel', { static: false }) sentinel!: ElementRef;
 
-  constructor(private storyService: StoryService) {}
+  constructor(private storyService: StoryService, private router: Router) {}
 
   ngAfterViewInit() {
     const observer = new IntersectionObserver(entries => {
@@ -37,5 +38,9 @@ export class AllStoriesComponent {
       
       this.pageIndex++;
     });
+  }
+
+  viewStory(id: string): void {
+    this.router.navigate(['/view-story', id]);
   }
 }

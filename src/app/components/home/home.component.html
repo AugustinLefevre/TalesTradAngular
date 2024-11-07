@@ -1,15 +1,4 @@
-<header>
-  <h1 id="nav-title">Yarn Yard</h1>
-  <p *ngFor="let item of weather | async">
-    {{ item.date }}: {{ item.temperatureC }}
-  </p>
-  <!-- <button mat-raised-button color="primary" (click)="logout()">Logout</button> -->
-  <div>
-    <nav>
-      <app-user-menu class="header"></app-user-menu>
-    </nav>
-  </div>
-</header>
+<app-header></app-header>
 <body>
   <app-chat-slidebar></app-chat-slidebar>
   <div>

@@ -9,11 +9,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 8%;
     overflow-y: auto;
-}
-.whitespace{
-    height: 0px;
+    padding-top: 60px;
 }
 .story-title{
     display: flex;

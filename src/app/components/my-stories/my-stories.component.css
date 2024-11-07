@@ -1,0 +1,24 @@
+.story{
+    width: 25%;
+    background-color: #dfe8d3;
+    margin: 3px;
+    border-radius: 5px;
+}
+.scroll-container {
+    margin-left: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+    padding-top: 60px;
+}
+.story-title{
+    display: flex;
+    font: 400 18px / 18px Roboto, sans-serif;
+    justify-content: center;
+    margin: 10px;
+}
+.story-main-idea{
+    font: 400 12px / 12px Roboto, sans-serif;
+    margin: 10px;
+}
