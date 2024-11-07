@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { StoryService } from '../../services/story-service/story.service';
 import {Story} from '../../models/story.model';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './my-stories.component.css'
 })
 export class MyStoriesComponent  implements OnInit {
-  constructor(private storyService: StoryService, private router: Router) {}
+  constructor(private storyService: StoryService, @Inject(Router)  private router: Router) {}
 
   stories: Story[] = [];
 

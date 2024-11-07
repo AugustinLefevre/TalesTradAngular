@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { StoryService } from '../../services/story-service/story.service';
 import { Router } from '@angular/router';
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class StoryCreationFormComponent implements OnInit {
   public storyCreationForm!: FormGroup;
   
-  constructor(private storyService: StoryService, private fb: FormBuilder, private router: Router){
+  constructor(private storyService: StoryService, @Inject(FormBuilder) private fb: FormBuilder, @Inject(Router) private router: Router){
 
   }
 

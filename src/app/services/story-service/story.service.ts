@@ -10,7 +10,7 @@ import { lastValueFrom } from 'rxjs';
 
 export class StoryService {
  
-  constructor(private router: Router, private storyClient: StoryClient){
+  constructor(private storyClient: StoryClient){
   }
 
   public async addStory(title: string, mainIdea: string) : Promise<string> {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit, ViewChild, Inject } from '@angular/core';
 import { Story } from '../../models/story.model';
 import { StoryService } from '../../services/story-service/story.service';
 import { Router } from '@angular/router';
@@ -14,7 +14,7 @@ export class AllStoriesComponent {
 
   @ViewChild('sentinel', { static: false }) sentinel!: ElementRef;
 
-  constructor(private storyService: StoryService, private router: Router) {}
+  constructor(private storyService: StoryService, @Inject(Router) private router: Router) {}
 
   ngAfterViewInit() {
     const observer = new IntersectionObserver(entries => {
@@ -29,7 +29,7 @@ export class AllStoriesComponent {
   }
 
   loadStories() {
-    this.storyService.getStories(this.pageIndex).subscribe(datas => {
+    this.storyService.getStories(this.pageIndex).subscribe((datas: any[]) => {
       this.stories.push(...datas);
       console.log("load stories with page index " + this.pageIndex);
       datas.forEach(element => {
