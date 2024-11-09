@@ -1,14 +1,14 @@
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: initial;
     align-items: center;
-    box-shadow: 0 1px 8px #8ab596;
-    background-color: #dfe8d3;
+    box-shadow: 0 1px 8px black;
+    background-color: #2e4028;
     position: fixed;
     width: 100%;
+    color: white;
 }
 
 #nav-title {
-    margin-right: auto;
     font-size: 1.5em;
 }

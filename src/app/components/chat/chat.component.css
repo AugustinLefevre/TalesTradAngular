@@ -1,5 +1,6 @@
 .owner-message{
-    background-color: #b0d3f3;
+    background-color: #2e4028;
+    color: white;
     margin-right: 5%;
     padding: 1% 1% 0% 1%;
     border-radius: 5px;
@@ -12,7 +13,7 @@
     margin-left: auto;
 }
 .non-owner-message{
-    background-color: #d8e9f9;
+    background-color: #e9f5e4;
     margin-left: 5%;
     padding: 1% 1% 0% 1%;
     border-radius: 5px;
@@ -27,10 +28,20 @@
 .container{
     display: flex;
 }
-.new-message-form {
-    width: 90%;
-    margin: 0 auto;
+.mat-mdc-text-field-wrapper {
+    height: 10% !important; 
+    flex: auto;
+    will-change: auto;
 }
 .submit-button{
     margin-left: auto;
+}
+.mat-mdc-card {
+    position: relative;
+    background-color: #609c4c;
+}
+
+.text-field{
+    border-radius: 10px !important;
+    background-color: #e9f5e4 !important;
 }

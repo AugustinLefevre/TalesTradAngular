@@ -16,8 +16,8 @@
             <form #loginForm=ngForm
             fxLayout="column" 
             fxLayoutAlign="center stretch">
-                <mat-form-field>
-                    <textarea matInput rows="5" autocomplete="off" name="newmessage" [(ngModel)]="newmessage" required (keydown.enter)="sendMessage()" ></textarea>
+                <mat-form-field >
+                    <textarea class="text-field" matInput rows="1" autocomplete="off" name="newmessage" [(ngModel)]="newmessage" required (keydown.enter)="sendMessage()" ></textarea>
                 </mat-form-field>
             </form>
         </mat-card-content>
